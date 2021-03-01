@@ -20,4 +20,11 @@ public class MainActivity extends AppCompatActivity {
         //i.putExtra("Cours", "Android");
         startActivity(i);
     }
+
+    public void callCreationCompte(View view) {
+        Intent i = new Intent(getApplicationContext(), CreationCompte.class);
+        //i.putExtra("Centre", "Global Knowledge");
+        //i.putExtra("Cours", "Android");
+        startActivity(i);
+    }
 }
