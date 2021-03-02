@@ -20,5 +20,7 @@ public class Conversion extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+        //json.get(GET https://api.exchangeratesapi.io/latest?base=USD HTTP/1.1)
+
     }
 }

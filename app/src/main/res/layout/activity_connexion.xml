@@ -65,7 +65,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/textView17"
+                android:id="@+id/pwdtextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
