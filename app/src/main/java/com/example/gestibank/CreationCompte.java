@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.gestibank.models.client;
+import com.example.gestibank.models.Client;
 import com.example.gestibank.remote.APIUtils;
 import com.example.gestibank.remote.clientService;
 
@@ -28,7 +28,7 @@ public class CreationCompte extends AppCompatActivity {
     EditText mail;
 
     clientService clientService;
-    List<client> list = new ArrayList<>();
+    List<Client> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +43,21 @@ public class CreationCompte extends AppCompatActivity {
     }
 
     public void getclientsList(View v){
-        Call<List<client>> call = clientService.getClients();
-        call.enqueue(new Callback<List<client>>() {
+        Call<List<Client>> call = clientService.getClients();
+        call.enqueue(new Callback<List<Client>>() {
             @Override
-            public void onResponse(Call<List<client>> call, Response<List<client>> response) {
+            public void onResponse(Call<List<Client>> call, Response<List<Client>> response) {
                 if(response.isSuccessful()){
                     list = response.body();
                     Log.i("Data: ", list.toString());
 
                     StringBuffer buffer=new StringBuffer();
-                    for (client user : list)
+                    for (Client user : list)
                     {
                         buffer.append("Password: "+user.getPassword()+"\n");
-                        buffer.append("Name: "+user.getName()+"\n\n");
+                        buffer.append("Name: "+user.getName()+"\n");
                         buffer.append("Tel:"+user.getTel()+"\n");
-                        buffer.append("Status: "+user.getStatus()+"\n\n");
+                        buffer.append("Status: "+user.getStatus()+"\n");
                         buffer.append("Mail: "+user.getMail()+"\n\n");
 
                     }
@@ -68,7 +68,7 @@ public class CreationCompte extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<client>> call, Throwable t) {
+            public void onFailure(Call<List<Client>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
@@ -76,30 +76,30 @@ public class CreationCompte extends AppCompatActivity {
 
 
     public void addclient(View v){
-        client u = new client("Mohamed Amine", "m@gmail.com", "0651487532");
-        Call<client> call = clientService.addClient(u);
-        call.enqueue(new Callback<client>() {
+        Client u = new Client(name.getText().toString(), mail.getText().toString(), tel.getText().toString());
+        Call<Client> call = clientService.addClient(u);
+        call.enqueue(new Callback<Client>() {
             @Override
-            public void onResponse(Call<client> call, Response<client> response) {
+            public void onResponse(Call<Client> call, Response<Client> response) {
                 if(response.isSuccessful()){
                     Toast.makeText(CreationCompte.this, "client created successfully!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<client> call, Throwable t) {
+            public void onFailure(Call<Client> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
     }
     
     
-    public void getForm(View view) {
+    /*public void getForm(View view) {
         name = (EditText) findViewById(R.id.nameView);
         tel = (EditText) findViewById(R.id.telView);
         mail = (EditText) findViewById(R.id.mailView);
         Toast.makeText(CreationCompte.this, name.getText() , Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
     public void callConnexion(View view) {
         Intent i = new Intent(getApplicationContext(), Connexion.class);

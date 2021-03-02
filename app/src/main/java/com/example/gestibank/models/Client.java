@@ -3,7 +3,7 @@ package com.example.gestibank.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class client {
+public class Client {
 
     @SerializedName("name")
     @Expose
@@ -25,10 +25,10 @@ public class client {
     @Expose
     private String status;
 
-    public client() {
+    public Client() {
     }
 
-    public client(String name, String mail, String tel) {
+    public Client(String name, String mail, String tel) {
         this.name=name;
         this.tel=tel;
         this.mail=mail;

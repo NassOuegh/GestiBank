@@ -1,6 +1,6 @@
 package com.example.gestibank.remote;
 
-import com.example.gestibank.models.client;
+import com.example.gestibank.models.Client;
 
 import java.util.List;
 
@@ -14,15 +14,15 @@ import retrofit2.http.Path;
 
 public interface clientService {
 
-    @GET("list/")
-    Call<List<client>> getClients();
+    @GET("/users/")
+    Call<List<Client>> getClients();
 
-    @POST("add/")
-    Call<client> addClient(@Body client client);
-
+    @POST("/users/")
+    Call<Client> addClient(@Body Client client);
+/*
     @PUT("update/{id}")
-    Call<client> updateClient(@Path("id") int id, @Body client client);
+    Call<cClient> updateClient(@Path("id") int id, @Body cClient client);
 
     @DELETE("delete/{id}")
-    Call<client> deleteClient(@Path("id") int id);
+    Call<cClient> deleteClient(@Path("id") int id);*/
 }
