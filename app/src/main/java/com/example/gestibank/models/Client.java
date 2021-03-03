@@ -25,15 +25,41 @@ public class Client {
     @Expose
     private String status;
 
+    @SerializedName("type")
+    @Expose
+    private String type;
+
+    @SerializedName("role")
+    @Expose
+    private String role;
+
     public Client() {
     }
 
-    public Client(String name, String mail, String tel) {
+    public Client(String name, String mail, String tel, String type) {
         this.name=name;
         this.tel=tel;
         this.mail=mail;
         this.status="EN ATTENTE";
         this.password="1234";
+        this.type=type;
+        this.role="CLIENT";
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getName() {

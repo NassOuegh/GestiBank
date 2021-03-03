@@ -14,10 +14,10 @@ import retrofit2.http.Path;
 
 public interface clientService {
 
-    @GET("/users/")
+    @GET("/clients/list/")
     Call<List<Client>> getClients();
 
-    @POST("/users/")
+    @POST("clients/add/")
     Call<Client> addClient(@Body Client client);
 /*
     @PUT("update/{id}")

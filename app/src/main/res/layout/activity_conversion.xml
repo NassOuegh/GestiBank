@@ -82,6 +82,7 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="105dp"
+            android:onClick="getConversionList"
             android:text="Convertir" />
 
     </LinearLayout>

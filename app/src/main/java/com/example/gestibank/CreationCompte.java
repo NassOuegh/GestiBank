@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.gestibank.models.Client;
@@ -26,6 +28,8 @@ public class CreationCompte extends AppCompatActivity {
     EditText name;
     EditText tel;
     EditText mail;
+    Spinner spinner;
+
 
     clientService clientService;
     List<Client> list = new ArrayList<>();
@@ -39,6 +43,16 @@ public class CreationCompte extends AppCompatActivity {
         name = (EditText) findViewById(R.id.nameView);
         mail = (EditText) findViewById(R.id.mailView);
         tel = (EditText) findViewById(R.id.telView);
+
+
+        spinner = (Spinner) findViewById(R.id.accountType_spinner);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.accountType_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spinner.setAdapter(adapter);
 
     }
 
@@ -76,7 +90,7 @@ public class CreationCompte extends AppCompatActivity {
 
 
     public void addclient(View v){
-        Client u = new Client(name.getText().toString(), mail.getText().toString(), tel.getText().toString());
+        Client u = new Client(name.getText().toString(), mail.getText().toString(), tel.getText().toString(), spinner.getSelectedItem().toString());
         Call<Client> call = clientService.addClient(u);
         call.enqueue(new Callback<Client>() {
             @Override

@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">GestiBank</string>
-    <string-array name="planets_array">
+    <string-array name="currency_array">
         <item>Dollar</item>
         <item>Dinar Tunisien</item>
         <item>Riyal</item>
         <item>Dirham</item>
         <item>Franc Suisse</item>
         <item>Livre Sterling</item>
+    </string-array>
+    <string-array name="accountType_array">
+        <item>CAC</item>
+        <item>CSC</item>
+        <item>EP</item>
     </string-array>
 </resources>
