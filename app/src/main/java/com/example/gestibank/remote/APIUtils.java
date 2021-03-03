@@ -12,6 +12,10 @@ public class APIUtils {
         return RetrofitClient.getClient(API_URL).create(clientService.class);
     }
 
+    public static AgentService getAgentService(){
+        return RetrofitClient.getAgent(API_URL).create(AgentService.class);
+    }
+
     public static ConversionService getConversionService(){
         return RetrofitClient.getConversion(API_CONVERSION_URL).create(ConversionService.class);
     }

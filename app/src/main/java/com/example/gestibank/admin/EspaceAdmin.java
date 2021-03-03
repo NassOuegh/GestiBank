@@ -1,4 +1,4 @@
-package com.example.gestibank;
+package com.example.gestibank.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,32 +6,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.gestibank.admin.EspaceAdmin;
+import com.example.gestibank.CreationCompte;
+import com.example.gestibank.R;
 
-public class MainActivity extends AppCompatActivity {
+public class EspaceAdmin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_espace_admin);
     }
 
-    public void callConversion(View view) {
-        Intent i = new Intent(getApplicationContext(), Conversion.class);
+    public void callListeDemandes(View view) {
+        Intent i = new Intent(getApplicationContext(), ListeDemandes.class);
         //i.putExtra("Centre", "Global Knowledge");
         //i.putExtra("Cours", "Android");
         startActivity(i);
     }
 
-    public void callCreationCompte(View view) {
-        Intent i = new Intent(getApplicationContext(), CreationCompte.class);
+    public void callAjoutAgents(View view) {
+        Intent i = new Intent(getApplicationContext(), AjoutAgents.class);
         //i.putExtra("Centre", "Global Knowledge");
         //i.putExtra("Cours", "Android");
         startActivity(i);
     }
 
-    public void callEspaceAdmin(View view) {
-        Intent i = new Intent(getApplicationContext(), EspaceAdmin.class);
+    public void callListeAgents(View view) {
+        Intent i = new Intent(getApplicationContext(), ListeAgents.class);
         //i.putExtra("Centre", "Global Knowledge");
         //i.putExtra("Cours", "Android");
         startActivity(i);
