@@ -39,7 +39,7 @@ public class ListeAgents extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_agents);
         agentService = APIUtils.getAgentService();
-
+        getAgentList(listView);
         refresh();
 // When the user clicks on the ListItem
 
@@ -65,7 +65,7 @@ public class ListeAgents extends AppCompatActivity {
                         buffer.append("Role:"+ag.getRole()+"\n");
                         buffer.append("Matricule: "+ag.getMatricule()+"\n\n");
                     }
-                    showMessage("Agents List", buffer.toString());
+                    //showMessage("Agents List", buffer.toString());
                     refresh();
                      //listView.setAdapter(new clientAdapter(MainActivity.this, R.layout.list_client, list));
                 }

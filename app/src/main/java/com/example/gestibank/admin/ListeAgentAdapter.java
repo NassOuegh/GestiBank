@@ -57,10 +57,10 @@ public class ListeAgentAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         Agent Agent = this.listData.get(position);
-        holder.nameView.setText(Agent.getName());
-        holder.mailView.setText(Agent.getMail());
-        holder.telView.setText(Agent.getTel());
-        holder.matriculeView.setText(Agent.getMatricule());
+        holder.nameView.setText("Nom: " + Agent.getName());
+        holder.mailView.setText("Mail: " + Agent.getMail());
+        holder.telView.setText("Tel: " + Agent.getTel());
+        holder.matriculeView.setText("Matricule: " + Agent.getMatricule());
         return convertView;
     }
 
