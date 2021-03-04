@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestiBank"
         android:usesCleartextTraffic="true">
+        <activity android:name=".client.EspaceClient"></activity>
         <activity android:name=".admin.AjoutAgents" />
         <activity android:name=".admin.ListeAgents" />
         <activity android:name=".admin.ListeDemandes" />

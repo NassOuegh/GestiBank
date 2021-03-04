@@ -42,7 +42,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/textView15"
+                android:id="@+id/logintextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -83,6 +83,7 @@
                 android:layout_width="274dp"
                 android:layout_height="67dp"
                 android:layout_weight="1"
+                android:onClick="getForm"
                 android:text="Se connecter" />
         </LinearLayout>
 
