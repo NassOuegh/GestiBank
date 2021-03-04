@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.gestibank.admin.EspaceAdmin;
+import com.example.gestibank.client.EspaceClients;
 import com.example.gestibank.models.Client;
 import com.example.gestibank.models.User;
 import com.example.gestibank.remote.APIUtils;
@@ -26,6 +27,9 @@ import retrofit2.Response;
 
 public class Connexion extends AppCompatActivity {
 
+    public static final String EXTRA_NAME = "com.example.gestibank.EXTRA_NAME";
+    public static final String EXTRA_MAIL = "com.example.gestibank.EXTRA_MAIL";
+
     EditText logintextView;
     EditText pwdtextView;
     String login;
@@ -40,6 +44,7 @@ public class Connexion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
         userService = APIUtils.getUserService();
+
 
     }
 
@@ -62,8 +67,8 @@ public class Connexion extends AppCompatActivity {
                                 case "AGENT":
                                     //callEspaceAgent(v);
                                     break;
-                                case "Client":
-                                    //callEspaceClient(v);
+                                case "CLIENT":
+                                    callEspaceClient(v);
                                     break;
                             }
                         } else {
@@ -86,6 +91,16 @@ public class Connexion extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), EspaceAdmin.class);
         //i.putExtra("Centre", "Global Knowledge");
         //i.putExtra("Cours", "Android");
+        startActivity(i);
+    }
+
+    public void callEspaceClient(View view) {
+        String username = user.getName();
+        String usermail = user.getMail();
+
+        Intent i = new Intent(getApplicationContext(), EspaceClients.class);
+        i.putExtra(EXTRA_NAME, username);
+        i.putExtra(EXTRA_MAIL, usermail);
         startActivity(i);
     }
 

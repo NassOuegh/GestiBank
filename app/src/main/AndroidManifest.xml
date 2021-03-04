@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestiBank"
         android:usesCleartextTraffic="true">
-        <activity android:name=".client.EspaceClient"></activity>
+        <activity
+            android:name=".client.EspaceClients"
+            android:parentActivityName=".Connexion"
+            android:label="@string/title_activity_espace_clients"
+            android:theme="@style/Theme.GestiBank.NoActionBar"></activity>
         <activity android:name=".admin.AjoutAgents" />
         <activity android:name=".admin.ListeAgents" />
         <activity android:name=".admin.ListeDemandes" />
