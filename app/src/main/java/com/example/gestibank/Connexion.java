@@ -104,6 +104,11 @@ public class Connexion extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void callCreationCompte(View view) {
+        Intent i = new Intent(getApplicationContext(), CreationCompte.class);
+        startActivity(i);
+    }
+
     public void getForm(View v){
         logintextView = (EditText) findViewById(R.id.logintextView);
         pwdtextView = (EditText) findViewById(R.id.pwdtextView);

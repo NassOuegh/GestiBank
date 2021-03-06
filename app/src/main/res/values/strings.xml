@@ -33,7 +33,6 @@
         <item>GBP</item>
         <item>KRW</item>
         <item>MYR</item>
-
     </string-array>
     <string-array name="accountType_array">
         <item>CAC</item>

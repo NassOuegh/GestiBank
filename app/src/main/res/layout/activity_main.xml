@@ -22,7 +22,7 @@
         android:layout_width="181dp"
         android:layout_height="77dp"
         android:layout_marginTop="364dp"
-        android:onClick="callCreationCompte"
+        android:onClick="callConnexion"
         android:text="Accéder à mes comptes"
         android:textColor="#FFFFFF"
         app:backgroundTint="@color/red_button"
