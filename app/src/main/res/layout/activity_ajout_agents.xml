@@ -7,9 +7,25 @@
     android:background="@mipmap/red_background"
     tools:context=".admin.AjoutAgents">
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="396dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="48dp"
+        android:background="@color/red_button"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="AJOUTER UN AGENT"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="715dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="380dp"
+        android:layout_height="255dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +34,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
             android:orientation="horizontal">
 
             <TextView
@@ -26,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nom"
+                android:text=" Nom"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -35,13 +52,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="101dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
             android:orientation="horizontal">
 
             <TextView
@@ -49,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Matricule"
+                android:text=" Matricule"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -58,13 +77,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
                 android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="109dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
             android:orientation="horizontal">
 
             <TextView
@@ -72,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mail"
+                android:text=" Mail"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -81,6 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
                 android:text="@gmail.com"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -88,7 +110,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
             android:orientation="horizontal">
 
             <TextView
@@ -96,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Telephone"
+                android:text=" Telephone"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -105,6 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
                 android:text="015426851"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -126,7 +150,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
