@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/red_background"
     tools:context=".admin.EspaceAdmin">
 
     <LinearLayout
         android:layout_width="293dp"
         android:layout_height="533dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="52dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,15 +34,16 @@
             <Button
                 android:id="@+id/button7"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="79dp"
                 android:layout_weight="1"
                 android:onClick="callListeAgents"
-                android:text="Liste des agents" />
+                android:text="Liste des agents"
+                app:backgroundTint="@color/red_button" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="107dp"
+            android:layout_height="40dp"
             android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
@@ -46,12 +57,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="callAjoutAgents"
-                android:text="Ajouter des agents" />
+                android:text="Ajouter des agents"
+                app:backgroundTint="@color/red_button" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="45dp"
             android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
@@ -62,10 +74,11 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="94dp"
                 android:layout_weight="1"
                 android:onClick="callListeDemandes"
-                android:text="Consulter les demandes" />
+                android:text="Consulter les demandes"
+                app:backgroundTint="@color/red_button" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,32 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/red_background"
     tools:context=".Connexion">
 
     <LinearLayout
-        android:layout_width="268dp"
-        android:layout_height="514dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"></LinearLayout>
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="206dp"
-            app:srcCompat="@mipmap/logo_large" />
+            android:layout_height="197dp"
+            app:srcCompat="@mipmap/logo_white_large" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="57dp"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:background="@color/red_button"
+                android:text="AUTHENTIFICATION"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="15dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
             android:orientation="horizontal">
 
             <TextView
@@ -37,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Login :"
+                android:text=" Login :"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -46,21 +73,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
                 android:textSize="24sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView16"
-                android:layout_width="wrap_content"
+                android:layout_width="78dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mot de passe :"
+                android:text=" Mot de passe :"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
@@ -69,13 +98,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@android:drawable/editbox_background_normal"
                 android:textSize="24sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="146dp"
             android:orientation="horizontal">
 
             <Button
@@ -84,7 +114,24 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:onClick="getForm"
-                android:text="Se connecter" />
+                android:text="Se connecter"
+                android:textSize="18sp"
+                app:backgroundTint="@color/red_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Vous n'êtes pas inscrit ? Cliquez-ici."
+                android:textColor="#2192F3"
+                android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -1,12 +1,39 @@
 <resources>
     <string name="app_name">GestiBank</string>
     <string-array name="currency_array">
-        <item>Dollar</item>
-        <item>Dinar Tunisien</item>
-        <item>Riyal</item>
-        <item>Dirham</item>
-        <item>Franc Suisse</item>
-        <item>Livre Sterling</item>
+        <item>CAD</item>
+        <item>HKD</item>
+        <item>ISK</item>
+        <item>PHP</item>
+        <item>DKK</item>
+        <item>HUF</item>
+        <item>CZK</item>
+        <item>AUD</item>
+        <item>RON</item>
+        <item>SEK</item>
+        <item>IDR</item>
+        <item>INR</item>
+        <item>BRL</item>
+        <item>RUB</item>
+        <item>HRK</item>
+        <item>JPY</item>
+        <item>THB</item>
+        <item>CHF</item>
+        <item>SGD</item>
+        <item>PLN</item>
+        <item>BGN</item>
+        <item>TRY</item>
+        <item>CNY</item>
+        <item>NOK</item>
+        <item>NZD</item>
+        <item>ZAR</item>
+        <item>USD</item>
+        <item>MXN</item>
+        <item>ILS</item>
+        <item>GBP</item>
+        <item>KRW</item>
+        <item>MYR</item>
+
     </string-array>
     <string-array name="accountType_array">
         <item>CAC</item>
@@ -22,6 +49,6 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Accueil</string>
-    <string name="menu_mes_chequiers">Mes chequiers</string>
+    <string name="menu_editer_rib">Editer un RIB</string>
     <string name="menu_historique">Historique de mes transactions</string>
 </resources>

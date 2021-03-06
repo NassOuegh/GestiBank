@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GestiBank"
+        android:theme="@style/Theme.GestiBank.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".client.EspaceClients"
@@ -21,10 +21,12 @@
         <activity android:name=".admin.ListeAgents" />
         <activity android:name=".admin.ListeDemandes" />
         <activity android:name=".admin.EspaceAdmin" />
-        <activity android:name=".Connexion" />
+        <activity android:name=".Connexion"
+            android:theme="@style/Theme.GestiBank.NoActionBar"/>
         <activity android:name=".CreationCompte" />
         <activity android:name=".Conversion" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.GestiBank.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

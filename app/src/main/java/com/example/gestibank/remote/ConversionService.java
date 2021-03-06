@@ -15,7 +15,7 @@ import retrofit2.http.Path;
 public interface ConversionService {
 
     @GET("/latest/")
-    Call<List<Rate>> getConversion();
+    Call<Rate> getConversion();
 /*
     @POST("/users/")
     Call<Client> addClient(@Body Client client);

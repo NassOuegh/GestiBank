@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/red_background"
     tools:context=".Conversion">
 
     <LinearLayout
-        android:layout_width="259dp"
-        android:layout_height="479dp"
+        android:layout_width="368dp"
+        android:layout_height="522dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="111dp"
+            android:layout_height="45dp"
             android:orientation="horizontal">
 
             <TextView
@@ -37,7 +38,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="169dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -49,7 +50,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/textView"
+                android:id="@+id/montant_conversion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="En euros"
@@ -59,7 +60,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="94dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -70,20 +71,27 @@
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
-            <EditText
-                android:id="@+id/textView4"
+            <TextView
+                android:id="@+id/resultat_conversion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="24sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:orientation="horizontal"></LinearLayout>
+
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="105dp"
             android:onClick="getConversionList"
-            android:text="Convertir" />
+            android:text="Convertir"
+            android:textSize="18sp"
+            app:backgroundTint="@color/red_button" />
 
     </LinearLayout>
 

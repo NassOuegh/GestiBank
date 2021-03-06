@@ -6,7 +6,7 @@ public class APIUtils {
     };
 
     public static final String API_URL = "http://192.168.1.54:81/";
-    public static final String API_CONVERSION_URL = "https://api.exchangeratesapi.io/latest/";
+    public static final String API_CONVERSION_URL = "https://api.exchangeratesapi.io/";
 
     public static clientService getClientService(){
         return RetrofitClient.getClient(API_URL).create(clientService.class);

@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.gestibank.client.ui.gallery.GalleryFragment"
-        android:label="@string/menu_mes_chequiers"
+        android:label="@string/menu_editer_rib"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
